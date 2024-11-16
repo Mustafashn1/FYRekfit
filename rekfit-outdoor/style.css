@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Lavishly+Yours&family=Playwrite+IE:wght@100..400&display=swap');
+
+/* Genel Ayarlar */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Anasayfa için Arka Plan Resmi */
+.hero {
+    height: 100vh;
+    background: url('img/Anasayfa.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    color: blanchedalmond;
+    font-family: "Playwrite IE", cursive;
+    font-weight: 700;
+    font-style: normal;
+}  
+
+.hero h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* Diğer Ayarlar */
+section {
+    padding: 2rem;
+}
+
+#gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+#contact-form label {
+    font-weight: bold;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    padding: 0.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #555;
+}
