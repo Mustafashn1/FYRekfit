@@ -1,0 +1,53 @@
+#contact-container {
+    display: flex; /* Yan yana yerleştirme */
+    width: 100%; /* Tam genişlik */
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    flex: 1; /* Eşit genişlik */
+    height: 500px; /* Tam ekran yüksekliği */
+    border: 0; /* Çerçeve kaldır */
+}
+
+#contact {
+    flex: 1; /* Eşit genişlik */
+    padding: 20px; /* İç boşluk */
+    box-sizing: border-box; /* Padding dahil genişlik */
+    background-color: #f9f9f9; /* Arka plan rengi */
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column; /* Dikey düzen */
+    gap: 15px; /* Elemanlar arası boşluk */
+    width: 100%; /* Tam genişlik */
+    max-width: 500px; /* Maksimum genişlik */
+    margin: auto; /* Ortalamak için */
+    margin-top: 80px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea, button {
+    width: 100%; /* Tam genişlik */
+    padding: 10px; /* İç boşluk */
+    border: 1px solid #ccc; /* Çerçeve */
+    border-radius: 5px; /* Köşe yuvarlama */
+    font-size: 14px; /* Yazı boyutu */
+}
+
+button {
+    background-color: #007BFF; /* Mavi arka plan */
+    color: white; /* Beyaz yazı */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Daha koyu mavi hover efekti */
+}

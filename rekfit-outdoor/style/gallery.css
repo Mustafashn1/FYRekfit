@@ -1,0 +1,59 @@
+#gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+}
+
+#gallery .gallery-grid img:focus {
+    transform: scale(2); /* Enlarge the image */
+    z-index: 10; /* Ensure the image stays on top */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow for emphasis */
+    position: fixed; /* Position the image fixed on the screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2); /* Center and scale the image */
+    width: 25%; /* Limit the size of the enlarged image */
+    height: 45%;
+    border-radius: 10px; /* Optional: round corners */
+}
+
+/* Blur the background when the image is focused */
+#gallery {
+    position: relative;
+    overflow: hidden;
+}
+
+#gallery:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+    backdrop-filter: blur(100px); /* Apply the blur effect */
+}
+
+/* Display the blur effect when an image is focused */
+#gallery .gallery-grid img:focus-visible {
+    outline: none; /* Remove the default focus outline */
+}
+
+#gallery .gallery-grid img:focus:before {
+    display: block; /* Show the blur background */
+}
+
+/* Optional: Add close functionality to remove focus on click */
+#gallery .gallery-grid img:focus {
+    pointer-events: none; /* Prevent interaction once the image is enlarged */
+}
